@@ -1,0 +1,136 @@
+body {
+  font-family: "Aboreto", cursive;
+  background-color: hsl(223, 9%, 38%);
+}
+
+* {
+  font-family: "Aboreto", cursive;
+}
+
+.domestic-section,
+.foreign-section {
+  height: 40vh;
+  width: 100%;
+}
+
+.header {
+  color: white;
+  font-weight: 900;
+  text-align: center;
+  font-size: 2rem;
+  padding: 1.5rem 0;
+  background-color: hsl(189, 3%, 53%);
+}
+
+.container {
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+}
+.btn {
+  width: 100%;
+  height: 3rem;
+  background-color: hsl(0, 6%, 60%);
+  border: none;
+
+  font-weight: 900;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.form {
+  width: 100%;
+  display: flex;
+}
+.input,
+.pln-converted {
+  width: 80%;
+  height: 60px;
+  border: none;
+  background-color: hsl(0, 6%, 82%);
+  display: flex;
+  justify-content: center;
+}
+
+.inputVal {
+  background-color: hsl(0, 6%, 82%);
+  border: none;
+  width: 100%;
+  padding-left: 0.75rem;
+}
+
+.currencies,
+.pln-name {
+  width: 20%;
+  background-color: hsl(0, 6%, 82%);
+  border: none;
+}
+
+.currencies {
+  font-size: 10px;
+}
+.pln-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pln-converted {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 900;
+}
+.logo {
+  margin: 15px auto;
+  border: none;
+  width: 15%;
+  height: 15%;
+  display: flex;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 100%;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "foreign-section domestic-section "
+      "button button";
+    grid-gap: 16px;
+    width: 80%;
+  }
+
+  .button {
+    grid-area: button;
+  }
+
+  .domestic-section {
+    grid-area: domestic-section;
+  }
+
+  .foreign-section {
+    grid-area: foreign-section;
+  }
+
+  .currencies,
+  .pln-name {
+    width: 35%;
+    background-color: hsl(0, 6%, 82%);
+  }
+
+  .btn:hover {
+    background-color: hsl(68, 6%, 50%);
+  }
+}
